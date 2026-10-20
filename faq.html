@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KeepHold / Kasam — FAQ / SSS</title>
+<style>
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px 20px; color: #1A1A2E; line-height: 1.7; }
+h1 { color: #4F7CFF; font-size: 28px; }
+.date { color: #888; font-size: 14px; margin-bottom: 24px; }
+details { border-bottom: 1px solid #eaeaea; padding: 10px 0; }
+summary { cursor: pointer; font-weight: 600; }
+details p { margin: 8px 0 4px; color: #444; }
+.tr-section { margin-top: 60px; padding-top: 40px; border-top: 1px solid #eaeaea; }
+a { color: #4F7CFF; text-decoration: none; } a:hover { text-decoration: underline; }
+.nav { font-size: 14px; color: #888; margin-bottom: 24px; }
+@media (prefers-color-scheme: dark) { body { background: #0b1020; color: #e6eaf2; } details p { color: #c3cad8; } details, .tr-section { border-color: #243049; } }
+</style>
+</head>
+<body>
+<div class="nav"><a href="support.html">Support</a> · <a href="index.html">Privacy Policy</a> · <a href="termsofuse.html">Terms of Use</a> · <a href="#tr">Türkçe</a></div>
+
+<div class="en-section">
+<h1>❓ KeepHold — Frequently Asked Questions</h1>
+<p class="date">KeepHold is published as <strong>Kasam</strong> in Türkiye. The same answers are also available inside the app under Settings › Help.</p>
+<details><summary>I forgot my PIN / password. What can I do?</summary><p>If you created a recovery key earlier, tap “Forgot PIN / password” on the lock screen, enter the key and set a new lock; your files stay as they are. If you did not, there is no way to get to the data: encryption happens entirely on your device and we hold no copy of your PIN or keys. Create one today: Settings › Security › Recovery key.</p></details>
+<details><summary>Where are my files stored? Can other apps see them?</summary><p>Files live in the app’s private storage; the gallery, file managers and other apps cannot see it. With encryption on (the default) every file is also AES‑256 encrypted, so even a copied file cannot be opened without the key.</p></details>
+<details><summary>What happens to my files if I delete the app?</summary><p>They are deleted together with the app and cannot be recovered. Before deleting, make an encrypted backup from Settings › Backup or move the vault to your new phone.</p></details>
+<details><summary>I am changing phones. How do I move the vault?</summary><p>Easiest: with both phones on the same Wi‑Fi, open Settings › “Move to a new phone” on the old one and “Get from old phone” on the new one, then scan the QR; files, folders, notes and accounts are transferred encrypted. Alternative: make an encrypted .kasam backup and restore it on the new phone. If files do not open after restoring from a system backup, you will be asked for your recovery key.</p></details>
+<details><summary>How does cloud backup work? Can Google or Apple see the content?</summary><p>The backup is written to a folder you choose (iCloud Drive, Google Drive, Files…) encrypted with your password; the provider only sees encrypted files. It cannot be opened without the password, and if you forget the password the backup cannot be opened either, so keep it somewhere safe like the recovery key.</p></details>
+<details><summary>Are photos removed from the gallery when I add them to the vault?</summary><p>You are asked when adding; if you choose so, the originals are removed from the gallery. On iPhone the system asks once more and keeps the photos in “Recently Deleted” for 30 days; delete them there too.</p></details>
+<details><summary>When does the vault lock by itself?</summary><p>When you leave the app (after the delay set in Settings › Security), when you put the phone face down or shake it (if panic lock is on) and when you tap the lock button. Auto-lock waits during long jobs such as transfers and backups.</p></details>
+<details><summary>Is Face ID / fingerprint safe?</summary><p>Biometrics are verified by the operating system; the app only receives a “verified” answer and never accesses face or fingerprint data. Your PIN is still required: if biometrics fail or settings change, the PIN is asked.</p></details>
+<details><summary>What is the decoy vault?</summary><p>You set a second PIN/password; unlocking with it opens a separate, empty vault. If someone makes you open the app, enter the decoy PIN and your real vault stays invisible. The two vaults have separate keys and files.</p></details>
+<details><summary>Where do intruder photos go?</summary><p>Photos taken on wrong unlock attempts, with time and (if allowed) location, are stored only on the device: Settings › Security › Intruders. Nothing is sent anywhere; you can delete them any time.</p></details>
+<details><summary>A file does not open or a video does not play</summary><p>Run Settings › Vault health › “Verify vault”; damaged or missing entries are listed and can be repaired. For unsupported formats (some rare video codecs) export the file and open it in another player.</p></details>
+<details><summary>How long are files kept in the trash?</summary><p>Deleted files stay in the trash for 30 days and are then permanently deleted automatically. Until then you can restore them or delete them right away.</p></details>
+<details><summary>How do I turn on autofill?</summary><p>Turn on the Settings › Autofill switch, then pick KeepHold in the system: on iPhone Settings › General › AutoFill &amp; Passwords (or Passwords › Password Options), on Android Settings › Passwords &amp; accounts › Autofill service. Your accounts are suggested in login fields; choosing one asks for the vault lock.</p></details>
+<details><summary>Does the breach check send my password to the internet?</summary><p>No. Only the first 5 characters of the password’s hash are sent to the “Have I Been Pwned” service and the match is looked up on the device. Neither the password nor its full hash leaves the phone. The check is optional and needs internet.</p></details>
+<details><summary>What does the app send to the internet?</summary><p>No account, no server, no ads or analytics. The only outgoing requests are the breach check you start (as above) and the encrypted backup written to the cloud folder you chose. The store privacy label says “data not collected”.</p></details>
+<details><summary>How can I free up space?</summary><p>Empty the trash (Settings › Trash), export and remove large videos, or use the free-space figure on the home screen to spot the biggest files. Thumbnails and temporary decrypted copies are cleaned automatically when the vault locks.</p></details>
+<details><summary>I found a bug or have a suggestion</summary><p>Settings › Help › “Report a problem” prepares an email draft with device info and the diagnostic log; your files and notes are not included. Just describe what you did and what happened.</p></details>
+<p style="margin-top:24px">Still stuck? Write to <a href="mailto:mfatihicin@gmail.com?subject=KeepHold%20Support">mfatihicin@gmail.com</a>.</p>
+</div>
+
+<div class="tr-section" id="tr">
+<h1>❓ Kasam — Sık Sorulan Sorular</h1>
+<p class="date">Uygulama Türkiye'de <strong>Kasam</strong>, diğer ülkelerde <strong>KeepHold</strong> adıyla yayınlanır. Aynı yanıtlar uygulama içinde Ayarlar › Yardım altında da bulunur.</p>
+<details><summary>I forgot my PIN / password. What can I do?</summary><p>If you created a recovery key earlier, tap “Forgot PIN / password” on the lock screen, enter the key and set a new lock; your files stay as they are. If you did not, there is no way to get to the data: encryption happens entirely on your device and we hold no copy of your PIN or keys. Create one today: Settings › Security › Recovery key.</p></details>
+<details><summary>Where are my files stored? Can other apps see them?</summary><p>Files live in the app’s private storage; the gallery, file managers and other apps cannot see it. With encryption on (the default) every file is also AES‑256 encrypted, so even a copied file cannot be opened without the key.</p></details>
+<details><summary>What happens to my files if I delete the app?</summary><p>They are deleted together with the app and cannot be recovered. Before deleting, make an encrypted backup from Settings › Backup or move the vault to your new phone.</p></details>
+<details><summary>I am changing phones. How do I move the vault?</summary><p>Easiest: with both phones on the same Wi‑Fi, open Settings › “Move to a new phone” on the old one and “Get from old phone” on the new one, then scan the QR; files, folders, notes and accounts are transferred encrypted. Alternative: make an encrypted .kasam backup and restore it on the new phone. If files do not open after restoring from a system backup, you will be asked for your recovery key.</p></details>
+<details><summary>How does cloud backup work? Can Google or Apple see the content?</summary><p>The backup is written to a folder you choose (iCloud Drive, Google Drive, Files…) encrypted with your password; the provider only sees encrypted files. It cannot be opened without the password, and if you forget the password the backup cannot be opened either, so keep it somewhere safe like the recovery key.</p></details>
+<details><summary>Are photos removed from the gallery when I add them to the vault?</summary><p>You are asked when adding; if you choose so, the originals are removed from the gallery. On iPhone the system asks once more and keeps the photos in “Recently Deleted” for 30 days; delete them there too.</p></details>
+<details><summary>When does the vault lock by itself?</summary><p>When you leave the app (after the delay set in Settings › Security), when you put the phone face down or shake it (if panic lock is on) and when you tap the lock button. Auto-lock waits during long jobs such as transfers and backups.</p></details>
+<details><summary>Is Face ID / fingerprint safe?</summary><p>Biometrics are verified by the operating system; the app only receives a “verified” answer and never accesses face or fingerprint data. Your PIN is still required: if biometrics fail or settings change, the PIN is asked.</p></details>
+<details><summary>What is the decoy vault?</summary><p>You set a second PIN/password; unlocking with it opens a separate, empty vault. If someone makes you open the app, enter the decoy PIN and your real vault stays invisible. The two vaults have separate keys and files.</p></details>
+<details><summary>Where do intruder photos go?</summary><p>Photos taken on wrong unlock attempts, with time and (if allowed) location, are stored only on the device: Settings › Security › Intruders. Nothing is sent anywhere; you can delete them any time.</p></details>
+<details><summary>A file does not open or a video does not play</summary><p>Run Settings › Vault health › “Verify vault”; damaged or missing entries are listed and can be repaired. For unsupported formats (some rare video codecs) export the file and open it in another player.</p></details>
+<details><summary>How long are files kept in the trash?</summary><p>Deleted files stay in the trash for 30 days and are then permanently deleted automatically. Until then you can restore them or delete them right away.</p></details>
+<details><summary>How do I turn on autofill?</summary><p>Turn on the Settings › Autofill switch, then pick Kasam in the system: on iPhone Settings › General › AutoFill &amp; Passwords (or Passwords › Password Options), on Android Settings › Passwords &amp; accounts › Autofill service. Your accounts are suggested in login fields; choosing one asks for the vault lock.</p></details>
+<details><summary>Does the breach check send my password to the internet?</summary><p>No. Only the first 5 characters of the password’s hash are sent to the “Have I Been Pwned” service and the match is looked up on the device. Neither the password nor its full hash leaves the phone. The check is optional and needs internet.</p></details>
+<details><summary>What does the app send to the internet?</summary><p>No account, no server, no ads or analytics. The only outgoing requests are the breach check you start (as above) and the encrypted backup written to the cloud folder you chose. The store privacy label says “data not collected”.</p></details>
+<details><summary>How can I free up space?</summary><p>Empty the trash (Settings › Trash), export and remove large videos, or use the free-space figure on the home screen to spot the biggest files. Thumbnails and temporary decrypted copies are cleaned automatically when the vault locks.</p></details>
+<details><summary>I found a bug or have a suggestion</summary><p>Settings › Help › “Report a problem” prepares an email draft with device info and the diagnostic log; your files and notes are not included. Just describe what you did and what happened.</p></details>
+<p style="margin-top:24px">Hâlâ çözülmediyse yaz: <a href="mailto:mfatihicin@gmail.com?subject=Kasam%20Destek">mfatihicin@gmail.com</a>.</p>
+</div>
+</body>
+</html>
