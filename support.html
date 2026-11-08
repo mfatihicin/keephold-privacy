@@ -20,6 +20,13 @@
     .contact strong { color: var(--text); }
     .contact a { color: var(--primary); text-decoration: none; }
     .updated { font-size: 13px; margin-bottom: 24px; }
+    .del { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 20px 24px; margin: 32px 0 16px; text-align: left; }
+    .del h2 { font-size: 20px; margin: 0 0 8px; }
+    .del h3 { font-size: 16px; margin: 18px 0 6px; }
+    .del p, .del li { color: var(--text-muted); font-size: 15px; margin: 0 0 8px; }
+    .del ul { padding-left: 20px; margin: 0 0 8px; }
+    .del strong, .del em { color: var(--text); }
+    .del a { color: var(--primary); text-decoration: none; }
     .footer { margin-top: 48px; font-size: 13px; color: var(--text-muted); }
     .footer a { color: var(--primary); text-decoration: none; }
   </style>
@@ -28,7 +35,7 @@
   <div class="icon">🔐</div>
   <h1>KeepHold · Kasam Help Center</h1>
   <p>How can we help? / Nasıl yardımcı olabiliriz?</p>
-  <p class="updated">Last updated / Son güncelleme: 8 November 2026 / 8 Kasım 2026 — new support address; KVKK notice added / yeni destek adresi; KVKK aydınlatma metni eklendi.</p>
+  <p class="updated">Last updated / Son güncelleme: 8 November 2026 / 8 Kasım 2026 — new support address; KVKK notice added; <a href="#data-deletion">data deletion</a> section / yeni destek adresi; KVKK aydınlatma metni ve <a href="#veri-silme">veri silme</a> bölümü eklendi.</p>
 
   <a class="card" href="faq.html">
     <div class="card-content"><h3>📚 Frequently Asked Questions</h3><span>Sık sorulan sorular — PIN, backup, moving to a new phone, privacy</span></div>
@@ -51,6 +58,48 @@
     <div class="arrow">›</div>
   </a>
 
+  <section class="del" id="data-deletion" lang="en">
+    <h2>🗑️ Data deletion</h2>
+    <p>KeepHold has no accounts and we have no server. Your vault files, notes and passwords, decoy vault and break-in records stay on your device (encrypted); we cannot see them or delete them for you.</p>
+    <h3>On your device</h3>
+    <ul>
+      <li><strong>Erase everything:</strong> Settings › Danger zone › <em>Erase all data</em>. Vault files and folders, trash, notes and passwords, the decoy vault, break-in logs, preferences and the lock (including the keys in Keychain / Keystore) are permanently erased and the app returns to the setup screen. This cannot be undone.</li>
+      <li><strong>Uninstalling the app</strong> also removes the vault on the device.</li>
+      <li><strong>Your backups:</strong> encrypted backups (<code>.kasam</code> files and the automatic backup's “Kasam Yedek” folder) stay in the folder you chose, e.g. iCloud Drive › KeepHold (Kasam), Google Drive or Files, until you delete them there. Erasing data in the app does not touch these folders or files you placed in the Files app yourself.</li>
+    </ul>
+    <h3>Data held by ad and purchase partners</h3>
+    <ul>
+      <li>In the free version, Unity LevelPlay and the ad networks it mediates process limited device data (advertising ID, approximate location from the IP address, ad interactions). Your vault content is never shared.</li>
+      <li><strong>Withdraw ad consent:</strong> Settings › About › Privacy &amp; legal › <em>Ad choices</em> → “I don’t accept”. You will still see ads, but they are not personalized.</li>
+      <li><strong>iPhone:</strong> turn off KeepHold under Settings › Privacy &amp; Security › Tracking. <strong>Android:</strong> Settings › Google › Ads › <em>Delete advertising ID</em> (on some phones Settings › Privacy › Ads).</li>
+      <li><strong>Pro:</strong> with Pro the ad SDK is never started, so no new data goes to ad partners.</li>
+      <li><strong>Purchase records:</strong> if you bought Pro, RevenueCat keeps a random app user ID and the purchase record. On request we ask RevenueCat to delete them where possible (we may ask for the order number on your Apple / Google receipt). The purchase itself stays in your Apple or Google account.</li>
+    </ul>
+    <h3>Deletion requests</h3>
+    <p>E-mail <a href="mailto:support@mfatihicin.com?subject=KeepHold%20data%20deletion">support@mfatihicin.com</a> or use Settings › About › Privacy &amp; legal › <em>Contact about my data</em>. We answer free of charge within 30 days. The correspondence is kept for up to 3 years as proof that we answered.</p>
+  </section>
+
+  <section class="del" id="veri-silme" lang="tr">
+    <h2>🗑️ Veri silme</h2>
+    <p>Kasam'da hesap yoktur ve bizim sunucumuz yoktur. Kasandaki dosyalar, notlar ve şifreler, sahte kasa ve izinsiz giriş kayıtları cihazında (şifreli) durur; biz bunları göremeyiz ve senin yerine silemeyiz.</p>
+    <h3>Cihazındaki veriler</h3>
+    <ul>
+      <li><strong>Her şeyi sil:</strong> Ayarlar › Tehlikeli bölge › <em>Tüm verileri sil</em>. Kasadaki dosya ve klasörler, çöp kutusu, notlar ve şifreler, sahte kasa, izinsiz giriş kayıtları, tercihler ve kilit (Keychain / Keystore'daki anahtarlar dahil) kalıcı olarak silinir, uygulama ilk kurulum ekranına döner. Geri alınamaz.</li>
+      <li><strong>Uygulamayı kaldırmak</strong> cihazdaki kasayı da siler.</li>
+      <li><strong>Yedeklerin:</strong> şifreli yedekler (<code>.kasam</code> dosyaları ve otomatik yedeğin “Kasam Yedek” klasörü) seçtiğin klasörde (ör. iCloud Drive › Kasam, Google Drive, Dosyalar) sen silene kadar kalır. Uygulamadaki silme işlemi bu klasörlere ve Dosyalar uygulamasına kendi koyduğun dosyalara dokunmaz.</li>
+    </ul>
+    <h3>Reklam ve satın alma ortaklarındaki veriler</h3>
+    <ul>
+      <li>Ücretsiz sürümde Unity LevelPlay ve aracılık ettiği reklam ağları sınırlı cihaz verilerini (reklam kimliği, IP'den yaklaşık konum, reklam etkileşimleri) işler. Kasa içeriğin hiçbir zaman paylaşılmaz.</li>
+      <li><strong>Reklam rızasını geri al:</strong> Ayarlar › Hakkında › Gizlilik ve yasal › <em>Reklam tercihleri</em> → “Kabul etmiyorum”. Reklam görmeye devam edersin ama reklamlar kişiselleştirilmez.</li>
+      <li><strong>iPhone:</strong> Ayarlar › Gizlilik ve Güvenlik › İzleme'den Kasam'ın iznini kapat. <strong>Android:</strong> Ayarlar › Google › Reklamlar › <em>Reklam kimliğini sil</em> (bazı telefonlarda Ayarlar › Gizlilik › Reklamlar).</li>
+      <li><strong>Pro:</strong> Pro'da reklam altyapısı hiç başlatılmaz; reklam ortaklarına yeni veri gitmez.</li>
+      <li><strong>Satın alma kayıtları:</strong> Pro aldıysan RevenueCat rastgele bir uygulama kimliği ve satın alma kaydı tutar. Talep edersen bu kayıtların silinmesini, mümkün olan ölçüde, RevenueCat'ten isteriz (kaydı bulmak için Apple / Google makbuzundaki sipariş numarasını isteyebiliriz). Satın almanın kendisi Apple veya Google hesabında kalır.</li>
+    </ul>
+    <h3>Silme talebi</h3>
+    <p><a href="mailto:support@mfatihicin.com?subject=Kasam%20veri%20silme">support@mfatihicin.com</a> adresine yaz ya da Ayarlar › Hakkında › Gizlilik ve yasal › <em>Veri talebi (KVKK/GDPR)</em>'yi kullan. En geç 30 gün içinde ücretsiz cevap veririz. Yazışma, cevap verdiğimizi ispat için en fazla 3 yıl saklanır.</p>
+  </section>
+
   <div class="contact">
     <strong>Developer &amp; data controller / Geliştirici ve veri sorumlusu:</strong> Mehmet Fatih İçin (independent developer, Türkiye / bağımsız geliştirici, Türkiye)<br>
     <strong>E-mail / E-posta:</strong> <a href="mailto:support@mfatihicin.com">support@mfatihicin.com</a><br>
@@ -59,6 +108,6 @@
     <strong>Web:</strong> <a href="https://mfatihicin.com">mfatihicin.com</a>
   </div>
 
-  <div class="footer">© 2026 KeepHold / Kasam · Mehmet Fatih İçin · <a href="mailto:support@mfatihicin.com">support@mfatihicin.com</a><br><a href="index.html">Privacy</a> · <a href="kvkk.html">KVKK</a> · <a href="termsofuse.html">Terms</a> · <a href="faq.html">FAQ</a></div>
+  <div class="footer">© 2026 KeepHold / Kasam · Mehmet Fatih İçin · <a href="mailto:support@mfatihicin.com">support@mfatihicin.com</a><br><a href="index.html">Privacy</a> · <a href="kvkk.html">KVKK</a> · <a href="termsofuse.html">Terms</a> · <a href="faq.html">FAQ</a> · <a href="#data-deletion">Data deletion / Veri silme</a></div>
 </body>
 </html>
