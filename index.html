@@ -13,138 +13,249 @@ h2 { color: #333; margin-top: 32px; font-size: 20px; }
 ul { margin-top: 8px; } li { margin-bottom: 8px; }
 a { color: #4F7CFF; text-decoration: none; } a:hover { text-decoration: underline; }
 .nav { font-size: 14px; color: #888; margin-bottom: 24px; }
-@media (prefers-color-scheme: dark) { body { background: #0b1020; color: #e6eaf2; } h2 { color: #e6eaf2; } .tr-section { border-color: #243049; } }
+.note { background: #f3f6ff; border: 1px solid #dbe4ff; border-radius: 10px; padding: 12px 16px; font-size: 15px; }
+.foot { margin-top: 56px; padding-top: 20px; border-top: 1px solid #eaeaea; font-size: 13px; color: #888; }
+@media (prefers-color-scheme: dark) { body { background: #0b1020; color: #e6eaf2; } h2 { color: #e6eaf2; } .tr-section, .foot { border-color: #243049; } .note { background: #131a2b; border-color: #243049; } }
 </style>
 </head>
 <body>
-<div class="nav"><a href="support.html">Support</a> · <a href="termsofuse.html">Terms of Use</a> · <a href="faq.html">FAQ</a> · <a href="#tr">Türkçe</a></div>
+<div class="nav"><a href="support.html">Support</a> · <a href="termsofuse.html">Terms of Use</a> · <a href="kvkk.html">KVKK Notice</a> · <a href="faq.html">FAQ</a> · <a href="#tr">Türkçe</a></div>
 
 <!-- ENGLISH VERSION FOR APP STORE REVIEWERS -->
 <div class="en-section">
 <h1>🔐 KeepHold Privacy Policy</h1>
-<p class="date">Last updated: October 2026 · KeepHold is published as <strong>Kasam</strong> in Türkiye; this policy covers both names.</p>
+<p class="date">Last updated: 8 November 2026 · Previous version: October 2026 · KeepHold is published as <strong>Kasam</strong> in Türkiye; this policy covers both names.</p>
 
-<p>KeepHold is a private vault for photos, videos, documents, notes and passwords. It was designed so that your data never has to leave your device. This policy explains what the app does and does not do with your data.</p>
+<p class="note"><strong>Update of 8 November 2026:</strong> data controller and contact details added; ad networks and their countries named; legal bases, transfers abroad, retention and your rights (KVKK / GDPR) added; Android document scanning, the private browser's default search engine and the problem report explained; the single support address is now support@mfatihicin.com. A separate <a href="kvkk.html">KVKK Information Notice</a> is available.</p>
 
-<h2>1. No account, no server, no data collection</h2>
-<p>KeepHold does <strong>not</strong> require an account and does <strong>not</strong> operate any server that receives your data. We do <strong>not</strong> collect, store or transmit your files, notes, passwords, usage statistics, crash reports or analytics. The only third‑party SDKs are the ad SDK used in the free version (section 5) and the purchase SDK (RevenueCat, section 6).</p>
+<p>KeepHold is a private vault for photos, videos, documents, notes and passwords. It was designed so that your vault content never has to leave your device. This policy explains what the app does and does not do with your data.</p>
+
+<p><strong>Data controller:</strong> Mehmet Fatih İçin (natural person, independent app developer, Türkiye) · E-mail: <a href="mailto:support@mfatihicin.com">support@mfatihicin.com</a> · Postal address / KEP: [YAZIŞMA ADRESİ / KEP — eklenecek] · Website: <a href="https://mfatihicin.com">mfatihicin.com</a>. KeepHold is developed and published by one individual, not by a company.</p>
+
+<h2>1. No account and no server for your vault</h2>
+<p>KeepHold does <strong>not</strong> require an account and we do <strong>not</strong> operate any server that receives your data. Your files, notes, passwords, search index, intruder records and browser data are never sent to us; we cannot see them. The app contains no analytics or crash-reporting SDK of its own. The only third-party SDKs that process data are the ad SDK in the free version (section 5) and the purchase SDK (RevenueCat, section 6).</p>
 
 <h2>2. Where your data lives and how it is protected</h2>
 <ul>
-<li>All files, notes and passwords are stored <strong>only on your device</strong>, in the app's private storage that other apps cannot read.</li>
-<li>Files are encrypted with AES-256-GCM. The encryption key is a random key stored in the device's secure store (iOS Keychain / Android Keystore) and never leaves the device. Notes, passwords and the search index are encrypted the same way.</li>
+<li>All files, notes and passwords are stored <strong>only on your device</strong>, in the app's private storage that other apps cannot read. On Android the app is excluded from the system's automatic cloud backup.</li>
+<li>Files are encrypted with AES-256-GCM. The encryption key is a random key stored in the device's secure store (iOS Keychain / Android Keystore) and never leaves the device. Notes, passwords, the search index (including text recognised in images) and browser bookmarks/history are encrypted the same way.</li>
 <li>Your PIN, password or pattern is stored in the device's secure store. Face ID, Touch ID and fingerprint are verified by the operating system; the app never receives biometric data.</li>
-<li>If you create an optional <strong>recovery key</strong>, it is shown to you once and is not stored anywhere except as a wrapped key on your device. We cannot recover your PIN, your recovery key or your data.</li>
+<li>If you create an optional <strong>recovery key</strong>, it is shown to you once and is kept on your device only in wrapped (encrypted) form. We cannot recover your PIN, your recovery key or your data.</li>
+<li>Decoy vault and extra vaults have their own keys and files on the device.</li>
 </ul>
 
 <h2>3. Optional features that use the network</h2>
-<p>The only network activity happens when you explicitly use one of these features, and none of it goes to a server operated by us:</p>
+<p>None of these sends data to a server operated by us:</p>
 <ul>
-<li><strong>Cloud backup / local backup:</strong> Backups are written to a folder <em>you choose</em> (for example iCloud Drive or Google Drive) as a file encrypted with a password you set. The cloud provider only ever sees encrypted data. Restoring requires that password.</li>
-<li><strong>Password breach check:</strong> Uses the Have I Been Pwned "Pwned Passwords" k‑anonymity API. Only the first five characters of a SHA‑1 hash of a password are sent; the password itself never leaves the device. This runs only when you tap the check.</li>
-<li><strong>Phone‑to‑phone transfer and Wi‑Fi transfer:</strong> Work only on your local network, directly between your devices, encrypted with a session key derived from the on‑screen code. No internet server is involved.</li>
-<li><strong>Private browser:</strong> Pages you open are loaded from the websites you visit. The browser keeps cookies only for the session and stores bookmarks and history encrypted on your device. We do not see what you browse.</li>
+<li><strong>Backups:</strong> Backups are written to a folder <em>you choose</em> as files encrypted with a password you set. On iPhone the default location (since version 1.2.6) is Kasam's folder in your own iCloud Drive; on Android you pick a folder (for example Google Drive or local storage). The cloud provider only sees encrypted data and holds it under your own account with them. Restoring requires that password.</li>
+<li><strong>Password breach check:</strong> Uses the Have I Been Pwned "Pwned Passwords" k‑anonymity API (api.pwnedpasswords.com). Only the first five characters of a SHA‑1 hash of a password are sent; the password and its full hash never leave the device. It runs only when you start the check. The service sees your IP address, as any website does.</li>
+<li><strong>Phone‑to‑phone transfer:</strong> Works only on your local network, directly between your devices; the content is encrypted with a session key derived from the code shown on screen. No internet server is involved.</li>
+<li><strong>Wi‑Fi transfer with a computer:</strong> The phone opens a temporary page on your local network that is protected by a 6‑digit code shown on the phone. Files go directly between your computer and your phone over your local network; no internet server is involved. Use it only on a network you trust.</li>
+<li><strong>Private browser:</strong> Pages you open are loaded directly from the websites you visit; the default search engine is <strong>DuckDuckGo</strong>, which receives the searches you type. Cookies and cache are kept only for the session; bookmarks, history (up to 500 entries) and open tabs are stored encrypted in the vault on your device. With tracking protection on, known ad/tracker domains are blocked and third-party cookies are off. We do not see what you browse; the websites you visit process data under their own policies.</li>
 <li><strong>Timed share:</strong> Creates a password‑protected, expiring file on your device that you share yourself (for example by e‑mail). We do not host or see it.</li>
+<li><strong>Document scanning and text recognition:</strong> On iPhone, Apple's on-device VisionKit/Vision frameworks are used. On Android, Google ML Kit (text recognition and the document scanner provided through Google Play services) runs on the device; scanned documents and images are not sent to Google. Google Play services may process general usage or diagnostic data under Google's own policies.</li>
+<li><strong>Report a problem:</strong> Settings › Help › "Report a problem" prepares an e-mail draft to support@mfatihicin.com with the app version, device model, language, vault counts, backup/autofill status and the last lines of an on-device diagnostic log. File names, file contents and notes are not included, and text that looks like an e-mail address or password is masked. Nothing is sent unless you send the e-mail yourself.</li>
 </ul>
 
 <h2>4. Permissions the app may ask for</h2>
 <ul>
-<li><strong>Photos / media:</strong> to import the items you select into the vault and, if you choose, to delete the originals.</li>
-<li><strong>Camera:</strong> to take photos, record videos, scan documents and, if you enable the intruder report, to take a photo on a wrong unlock attempt. Intruder photos stay on the device.</li>
-<li><strong>Microphone:</strong> to record audio notes into the vault.</li>
-<li><strong>Location:</strong> only if you enable location in the intruder report; the location is stored on the device with the attempt.</li>
-<li><strong>Notifications:</strong> for local reminders such as backup problems and intruder alerts. No push server is used.</li>
+<li><strong>Photos / media:</strong> to import the items you select into the vault and, if you choose, to delete the originals or export items back to the gallery.</li>
+<li><strong>Camera:</strong> to take photos, record videos, scan documents and, if you turn on the intruder report (off by default), to take a front-camera photo on a wrong unlock attempt.</li>
+<li><strong>Microphone:</strong> to record audio notes and the sound of videos recorded into the vault.</li>
+<li><strong>Location (while using the app):</strong> only if you turn on location in the intruder report (off by default); the location is stored on the device with the attempt.</li>
+<li><strong>Notifications:</strong> local notifications such as backup reminders and intruder alerts. No push server is used.</li>
 <li><strong>Local network:</strong> for Wi‑Fi and phone‑to‑phone transfer.</li>
-<li><strong>Autofill (system credential provider):</strong> if you enable it, your saved logins are offered in other apps and browsers through the operating system. The records are kept in the app's encrypted shared store on the device.</li>
+<li><strong>Autofill (system credential provider):</strong> if you turn it on, your saved logins are offered in other apps and browsers through the operating system. The records are kept in the app's encrypted store on the device.</li>
+<li><strong>Tracking (iOS) / advertising ID (Android):</strong> see section 5.</li>
 </ul>
 <p>Every permission is optional and can be revoked in the system settings.</p>
+<p><strong>Other people's data:</strong> An intruder photo and its location may show another person who tried to open your phone. These records stay only on your device and you are responsible for using them lawfully. We never receive them.</p>
 
 <h2>5. Advertising in the free version</h2>
-<p>The free version shows ads (a banner on the vault screen, an occasional full‑screen ad when you return from a viewer, and an optional rewarded ad that unlocks a 72‑hour Pro trial). Ads are delivered by <strong>Unity LevelPlay (ironSource)</strong> and its mediated ad networks. For this purpose the ad SDK may collect your device's advertising identifier (IDFA on iOS, only if you allow tracking; GAID on Android), coarse device information (model, OS version, language, IP‑based approximate location) and ad interaction data. <strong>Nothing from your vault (files, notes, passwords, search index) is ever available to the ad SDK.</strong></p>
+<p>The free version shows ads: a banner on some vault screens, an occasional full‑screen ad, and an optional rewarded ad that unlocks a 72‑hour Pro trial. Ads are delivered by <strong>Unity LevelPlay (ironSource)</strong> and the ad networks it mediates. For this purpose the ad SDKs may process your device's advertising identifier (IDFA on iOS, only if you allow tracking; Google advertising ID and App Set ID on Android), the vendor identifier (IDFV), device information (model, OS version, language), your IP address and approximate location derived from it, ad interactions and diagnostic data. <strong>Nothing from your vault (files, notes, passwords, search index, browser data) is ever available to the ad SDKs.</strong></p>
+<p>Recipients:</p>
 <ul>
-<li><strong>Your choice:</strong> on iOS the system asks for tracking permission; in the EU/EEA/UK/Switzerland a consent dialog lets you choose personalized or non‑personalized ads; US users can opt out of "sale/sharing" via Settings › Ad choices. You can change the choice any time in Settings.</li>
-<li><strong>No ads at all:</strong> KeepHold Pro removes ads and the ad SDK is never initialized for Pro users.</li>
-<li>Ad partner policies: <a href="https://unity.com/legal/privacy-policy">Unity privacy policy</a>.</li>
+<li>Unity Technologies — Unity LevelPlay / ironSource mediation (including its ad-quality component): USA, Israel and other countries</li>
+<li>Unity Ads (Unity Technologies): USA</li>
+<li>Liftoff Monetize (Vungle): USA</li>
+<li>Yandex Mobile Ads (including AppMetrica components): Yandex group of companies; depending on the processing company, the Russian Federation, the UAE or other countries</li>
+<li>BIGO Ads: Singapore — its adapter is included in the app, but no ads are currently requested from this network; if it is enabled it may process the same data</li>
+</ul>
+<p>Ad networks may also process data such as approximate location derived from your IP address under their own privacy policies, to serve and measure ads and prevent fraud. For this processing they act as independent controllers.</p>
+<ul>
+<li><strong>Your choices:</strong> On iOS the system asks for tracking permission; if you do not allow it, the IDFA is not shared. In the EU/EEA, the UK and Switzerland a consent dialog lets you choose personalized or non‑personalized ads on first launch. US users can opt out of the "sale/sharing" of personal information. In every country you can choose personalized or non-personalized ads at any time under <em>Settings › Privacy &amp; legal › Ad choices</em>; choosing non-personalized sends a "no consent / do not sell" signal to LevelPlay.</li>
+<li><strong>Türkiye and other countries:</strong> In the current app versions no separate ad-consent screen is shown on first launch outside the EU/EEA, UK and Switzerland. On iOS the IDFA is shared only if you allow tracking; on Android the ad networks may use your device's advertising ID. If you do not want personalized ads, choose "non-personalized" under Ad choices and/or delete or reset the advertising ID in your device settings (Android: Settings › Privacy (or Google) › Ads; iOS: Settings › Privacy &amp; Security › Tracking).</li>
+<li><strong>No ads at all:</strong> KeepHold Pro (and the 72-hour trial) removes ads; while Pro is active the ad SDK is not initialized and the tracking prompt is not shown.</li>
+<li>Policies: <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity</a> · <a href="https://liftoff.io/privacy-policy/">Liftoff</a> · <a href="https://yandex.com/legal/confidential/">Yandex</a> · <a href="https://www.bigossp.com/privacy">BIGO Ads</a></li>
 </ul>
 
 <h2>6. In‑app purchase</h2>
-<p>KeepHold Pro is a one‑time purchase processed by Apple App Store or Google Play. We do not receive or store payment details. Purchase entitlements are validated through <strong>RevenueCat</strong>, which receives an anonymous app user ID and the store receipt; it never sees vault content. The purchase is tied to your store account and can be restored from the app.</p>
+<p>KeepHold Pro is a one‑time purchase processed by Apple App Store or Google Play. We do not receive or store payment details. Purchase entitlements are validated through <strong>RevenueCat, Inc. (USA)</strong>, which receives an anonymous app user ID, the store receipt/purchase history, your IP address and basic device information; it never sees vault content. The purchase is tied to your store account and can be restored from the app. Apple and Google process your purchase as independent controllers under their own policies.</p>
 
-<h2>7. Children's privacy</h2>
-<p>The app is not directed at children under 13 and we knowingly collect no data from anyone, including children.</p>
+<h2>7. Purposes and legal bases</h2>
+<ul>
+<li><strong>Verifying and restoring your purchase, answering your support e-mails:</strong> performance of a contract (KVKK Art. 5/2-c; GDPR Art. 6(1)(b)).</li>
+<li><strong>Showing non-personalized ads that fund the free version, ad-fraud prevention, security:</strong> legitimate interests (KVKK Art. 5/2-f; GDPR Art. 6(1)(f)).</li>
+<li><strong>Personalized ads:</strong> your consent (KVKK Art. 5/1; GDPR Art. 6(1)(a)), given through the iOS tracking permission and/or the Ad choices setting, and withdrawable at any time (see section 5 for the current state in Türkiye).</li>
+<li><strong>Keeping records of privacy requests, legal claims:</strong> legal obligation and establishing/defending rights (KVKK Art. 5/2-ç and 5/2-e).</li>
+</ul>
+<p>Data that stays only on your device (your vault) is not processed by us. We do not sell your data and we do not make automated decisions about you.</p>
 
-<h2>8. Data deletion</h2>
-<p>Because all data is on your device, you control it completely: delete individual items, use "Delete all data" in Settings, or uninstall the app. Uninstalling removes the vault and its keys permanently. Backups you saved to your own cloud folder remain under your control.</p>
+<h2>8. Transfers abroad</h2>
+<p>Our service providers' servers are outside Türkiye, so transferring the data listed above to countries such as the USA, Israel, the Russian Federation/UAE and Singapore is technically necessary for the free version and purchases to work. The Turkish Personal Data Protection Board has not issued an adequacy decision for these countries. These transfers fall under Article 9 of Law No. 6698 (KVKK). As of today, <strong>no</strong> KVKK standard contract has been signed with these providers and notified to the Authority; for these transfers we rely on the data-protection commitments in the providers' own terms (data processing agreements and the technical and organisational security measures based on them). We are asking the providers to sign the standard contract published by the Board under Article 9; if one is signed, it will be notified to the Authority within 5 business days as the law requires, and this policy will be updated. We try to keep the transferred data to the minimum the service needs. For users in the EU/EEA, transfers rely on the safeguards offered by the providers, such as the EU Standard Contractual Clauses or the EU-U.S. Data Privacy Framework. Pro users avoid the ad-related transfers entirely.</p>
 
-<h2>9. Changes</h2>
-<p>If this policy changes, the new version will be published on this page with an updated date.</p>
+<h2>9. Retention</h2>
+<ul>
+<li><strong>Vault content, intruder records, browser data:</strong> on your device until you delete them or the app. Items in the trash are deleted automatically after 30 days.</li>
+<li><strong>Backups:</strong> in the folder you chose, until you delete them; they are not deleted when you uninstall the app.</li>
+<li><strong>E-mails you send us</strong> (support, problem reports, data requests): as long as needed to answer; privacy requests and our replies are kept for 3 years as proof.</li>
+<li><strong>Ad networks, RevenueCat, Apple and Google:</strong> under their own retention policies. RevenueCat keeps the purchase record to restore your purchase.</li>
+</ul>
 
-<h2>10. Contact</h2>
-<p>Questions about privacy: <a href="mailto:mfatihicin@gmail.com">mfatihicin@gmail.com</a></p>
+<h2>10. Children's privacy</h2>
+<p>KeepHold is for a general audience; it is <strong>not directed to children under 13</strong> and is not listed in the stores' children's categories ("Kids", "Families"); its target audience on Google Play is 18+. If you are under 18, please use the app with the knowledge and supervision of a parent or guardian; for purchases we recommend the stores' parental controls (Apple "Ask to Buy", Google Play parental controls). If we learn that we process data of a child under 13, we will delete it. Parents who believe their child has shared data can write to <a href="mailto:support@mfatihicin.com">support@mfatihicin.com</a>.</p>
+
+<h2>11. Data deletion</h2>
+<p>Because your vault is on your device, you control it completely: delete individual items, use "Delete all data" in Settings, or uninstall the app. Uninstalling removes the vault and its keys permanently. Backups you saved to your own cloud folder remain under your control. To reset the advertising ID, use your device settings (section 5). For anything we hold (e-mails) or the RevenueCat purchase record, write to us; because the RevenueCat ID is anonymous, we may need the store order number to find it.</p>
+
+<h2>12. Your rights</h2>
+<p>Under Article 11 of the KVKK you have the right to: learn whether your personal data is processed and, if so, request information about it; learn the purpose of processing and whether data is used accordingly; know the third parties in Türkiye or abroad to whom it is transferred; ask for incomplete or inaccurate data to be corrected, for data to be erased or destroyed under Article 7, and for these actions to be notified to the third parties it was transferred to; object to a result against you arising solely from automated analysis; and claim compensation if you suffer damage because of unlawful processing. Under the GDPR you also have the rights of access, rectification, erasure, restriction, objection, portability and withdrawal of consent. California residents: if you choose non-personalized ads, we pass a "do not sell or share" signal to our ad partner.</p>
+<ul>
+<li><strong>In the app:</strong> Settings › Privacy &amp; legal › "Contact about my data" (in current app versions).</li>
+<li><strong>E-mail:</strong> <a href="mailto:support@mfatihicin.com">support@mfatihicin.com</a></li>
+<li><strong>In writing or by KEP:</strong> [YAZIŞMA ADRESİ / KEP — eklenecek]</li>
+</ul>
+<p>We answer within <strong>30 days</strong>, free of charge. If your request is refused, you find our answer insufficient or we do not answer in time, you may complain to the Turkish Personal Data Protection Board (KVKK Art. 14). People in the EU/EEA may also complain to their local data protection authority. Details: <a href="kvkk.html">KVKK Information Notice</a>.</p>
+
+<h2>13. Security incidents</h2>
+<p>We do not hold your vault, so a breach on our side cannot expose it. If we ever learn of a data breach affecting data we process, we will notify the Turkish Personal Data Protection Board within 72 hours and inform affected people as soon as reasonably possible.</p>
+
+<h2>14. Changes</h2>
+<p>If this policy changes, the new version will be published on this page with an updated date; significant changes will also be mentioned in the app.</p>
+
+<h2>15. Contact</h2>
+<p>Mehmet Fatih İçin · <a href="mailto:support@mfatihicin.com">support@mfatihicin.com</a> · <a href="support.html">Help Center</a></p>
 </div>
 
 <!-- TÜRKÇE -->
 <div class="tr-section" id="tr">
 <h1>🔐 Kasam (KeepHold) Gizlilik Politikası</h1>
-<p class="date">Son güncelleme: Ekim 2026 · Uygulama Türkiye'de <strong>Kasam</strong>, diğer ülkelerde <strong>KeepHold</strong> adıyla yayınlanır; bu politika ikisini de kapsar.</p>
+<p class="date">Son güncelleme: 8 Kasım 2026 · Önceki sürüm: Ekim 2026 · Uygulama Türkiye'de <strong>Kasam</strong>, diğer ülkelerde <strong>KeepHold</strong> adıyla yayınlanır; bu politika ikisini de kapsar.</p>
 
-<p>Kasam; fotoğraf, video, belge, not ve şifreler için özel bir kasadır. Verilerinin cihazından hiç çıkmak zorunda kalmaması için tasarlandı. Bu politika uygulamanın verilerinle ne yaptığını ve ne yapmadığını açıklar.</p>
+<p class="note"><strong>8 Kasım 2026 güncellemesi:</strong> veri sorumlusu ve iletişim bilgileri eklendi; reklam ağları ve ülkeleri adıyla yazıldı; hukuki sebepler, yurt dışına aktarım, saklama süreleri ve KVKK haklarınız eklendi; Android belge tarama, gizli tarayıcının varsayılan arama motoru ve sorun raporu açıklandı; tek destek adresi artık support@mfatihicin.com. Ayrıca ayrı bir <a href="kvkk.html">KVKK Aydınlatma Metni</a> yayımlandı.</p>
 
-<h2>1. Hesap yok, sunucu yok, veri toplama yok</h2>
-<p>Kasam hesap <strong>gerektirmez</strong> ve verilerini alan herhangi bir sunucu <strong>işletmez</strong>. Dosyalarını, notlarını, şifrelerini, kullanım istatistiklerini, çökme raporlarını ya da analitik verileri <strong>toplamayız, saklamayız, iletmeyiz</strong>. Üçüncü taraf kütüphaneler yalnızca ücretsiz sürümdeki reklam SDK'sı (5. bölüm) ve satın alma SDK'sıdır (RevenueCat, 6. bölüm).</p>
+<p>Kasam; fotoğraf, video, belge, not ve şifreler için özel bir kasadır. Kasa içeriğinin cihazından hiç çıkmak zorunda kalmaması için tasarlandı. Bu politika uygulamanın verilerinle ne yaptığını ve ne yapmadığını açıklar.</p>
+
+<p><strong>Veri sorumlusu:</strong> Mehmet Fatih İçin (gerçek kişi, bağımsız uygulama geliştiricisi, Türkiye) · E-posta: <a href="mailto:support@mfatihicin.com">support@mfatihicin.com</a> · Yazışma adresi / KEP: [YAZIŞMA ADRESİ / KEP — eklenecek] · İnternet sitesi: <a href="https://mfatihicin.com">mfatihicin.com</a>. Kasam bir şirket tarafından değil, tek bir kişi tarafından geliştirilir ve yayımlanır.</p>
+
+<h2>1. Kasan için hesap yok, sunucu yok</h2>
+<p>Kasam hesap <strong>istemez</strong> ve verilerini alan bir sunucu <strong>işletmeyiz</strong>. Dosyaların, notların, şifrelerin, arama dizinin, izinsiz giriş kayıtların ve tarayıcı verilerin bize hiçbir zaman gönderilmez; biz bunları göremeyiz. Uygulamanın kendine ait bir analiz veya çökme raporlama aracı yoktur. Veri işleyen üçüncü taraf yazılım kitleri yalnızca ücretsiz sürümdeki reklam kiti (5. bölüm) ve satın alma kitidir (RevenueCat, 6. bölüm).</p>
 
 <h2>2. Verilerin nerede durur, nasıl korunur</h2>
 <ul>
-<li>Tüm dosyalar, notlar ve şifreler <strong>yalnızca cihazında</strong>, başka uygulamaların okuyamadığı özel alanda tutulur.</li>
-<li>Dosyalar AES‑256‑GCM ile şifrelenir. Şifreleme anahtarı rastgele üretilir, cihazın güvenli deposunda (iOS Keychain / Android Keystore) saklanır ve cihazdan çıkmaz. Notlar, şifreler ve arama dizini de aynı şekilde şifrelidir.</li>
-<li>PIN, şifre ya da desenin cihazın güvenli deposundadır. Face ID, Touch ID ve parmak izi işletim sistemi tarafından doğrulanır; uygulama biyometrik veriye erişmez.</li>
-<li>İsteğe bağlı <strong>kurtarma anahtarı</strong> oluşturursan sana bir kez gösterilir ve cihazındaki sarmalanmış kopya dışında hiçbir yerde saklanmaz. PIN'ini, kurtarma anahtarını ya da verilerini biz kurtaramayız.</li>
+<li>Tüm dosyalar, notlar ve şifreler <strong>yalnızca cihazında</strong>, diğer uygulamaların okuyamadığı uygulamaya özel alanda saklanır. Android'de uygulama, sistemin otomatik bulut yedeğinin dışında tutulur.</li>
+<li>Dosyalar AES-256-GCM ile şifrelenir. Şifreleme anahtarı rastgele üretilir, cihazın güvenli deposunda (iOS Keychain / Android Keystore) tutulur ve cihazdan hiç çıkmaz. Notlar, şifreler, arama dizini (görsellerden tanınan metinler dahil) ve tarayıcı yer imleri/geçmişi de aynı şekilde şifrelenir.</li>
+<li>PIN'in, şifren veya desenin cihazın güvenli deposunda saklanır. Face ID, Touch ID ve parmak izi işletim sistemi tarafından doğrulanır; uygulama biyometrik veriye hiç erişmez.</li>
+<li>İsteğe bağlı bir <strong>kurtarma anahtarı</strong> oluşturursan sana bir kez gösterilir; cihazında yalnızca sarmalanmış (şifreli) hâlde tutulur. PIN'ini, kurtarma anahtarını veya verilerini biz kurtaramayız.</li>
+<li>Sahte kasa ve ek kasaların cihazda kendi anahtarları ve dosyaları vardır.</li>
 </ul>
 
-<h2>3. Ağ kullanan isteğe bağlı özellikler</h2>
-<p>Ağ trafiği yalnızca aşağıdaki özellikleri sen kullandığında oluşur ve hiçbiri bizim işlettiğimiz bir sunucuya gitmez:</p>
+<h2>3. İnternet kullanan isteğe bağlı özellikler</h2>
+<p>Bunların hiçbiri bizim işlettiğimiz bir sunucuya veri göndermez:</p>
 <ul>
-<li><strong>Bulut yedeği / yerel yedek:</strong> Yedek, <em>senin seçtiğin</em> klasöre (ör. iCloud Drive, Google Drive) senin belirlediğin parolayla şifrelenmiş dosya olarak yazılır. Bulut sağlayıcı yalnızca şifreli veriyi görür. Geri yükleme için parola gerekir.</li>
-<li><strong>Parola sızıntı kontrolü:</strong> Have I Been Pwned "Pwned Passwords" k‑anonimlik API'si kullanılır. Parolanın SHA‑1 özetinin yalnızca ilk beş karakteri gönderilir; parolanın kendisi cihazdan çıkmaz. Yalnızca sen kontrol düğmesine dokununca çalışır.</li>
-<li><strong>Telefondan telefona ve Wi‑Fi aktarımı:</strong> Yalnızca yerel ağda, cihazların arasında doğrudan ve ekrandaki koddan türetilen oturum anahtarıyla şifreli çalışır. İnternet sunucusu yoktur.</li>
-<li><strong>Gizli tarayıcı:</strong> Açtığın sayfalar ziyaret ettiğin sitelerden yüklenir. Tarayıcı çerezleri yalnızca oturum boyunca tutar; yer imleri ve geçmiş cihazında şifreli saklanır. Ne gezdiğini görmeyiz.</li>
-<li><strong>Süreli paylaşım:</strong> Cihazında parolalı ve süresi dolan bir dosya üretir; onu sen paylaşırsın (ör. e‑posta ile). Biz barındırmayız, görmeyiz.</li>
+<li><strong>Yedekler:</strong> Yedekler <em>senin seçtiğin</em> klasöre, belirlediğin parolayla şifrelenmiş dosyalar olarak yazılır. iPhone'da varsayılan yer (1.2.6 sürümünden beri) kendi iCloud Drive'ındaki Kasam klasörüdür; Android'de klasörü sen seçersin (ör. Google Drive veya cihaz depolaması). Bulut sağlayıcısı yalnızca şifreli veriyi görür ve bunu seninle kendi hesabın arasındaki ilişki kapsamında saklar. Geri yükleme için parola gerekir.</li>
+<li><strong>Şifre sızıntı kontrolü:</strong> Have I Been Pwned "Pwned Passwords" k‑anonimlik servisini (api.pwnedpasswords.com) kullanır. Şifrenin SHA‑1 özetinin yalnızca ilk beş karakteri gönderilir; şifrenin kendisi ve tam özeti cihazdan çıkmaz. Yalnızca kontrolü sen başlattığında çalışır. Servis, her web sitesi gibi IP adresini görür.</li>
+<li><strong>Telefondan telefona aktarım:</strong> Yalnızca yerel ağında, cihazların arasında doğrudan çalışır; içerik ekranda gösterilen koddan türetilen oturum anahtarıyla şifrelenir. İnternet sunucusu kullanılmaz.</li>
+<li><strong>Bilgisayarla Wi‑Fi aktarımı:</strong> Telefon, yerel ağında telefondaki 6 haneli kodla korunan geçici bir sayfa açar. Dosyalar bilgisayarınla telefonun arasında doğrudan yerel ağ üzerinden gider; internet sunucusu kullanılmaz. Bu özelliği yalnızca güvendiğin bir ağda kullan.</li>
+<li><strong>Gizli tarayıcı:</strong> Açtığın sayfalar doğrudan ziyaret ettiğin sitelerden yüklenir; varsayılan arama motoru <strong>DuckDuckGo</strong>'dur ve yazdığın aramaları alır. Çerezler ve önbellek yalnızca oturum boyunca tutulur; yer imleri, geçmiş (en çok 500 kayıt) ve açık sekmeler cihazındaki kasada şifreli saklanır. İzleme koruması açıkken bilinen reklam/izleyici alan adları engellenir ve üçüncü taraf çerezler kapalıdır. Neye göz attığını biz görmeyiz; ziyaret ettiğin siteler verileri kendi politikalarına göre işler.</li>
+<li><strong>Süreli paylaşım:</strong> Cihazında, parolalı ve süresi dolan bir dosya oluşturur; bu dosyayı sen paylaşırsın (ör. e-postayla). Biz barındırmayız ve göremeyiz.</li>
+<li><strong>Belge tarama ve metin tanıma:</strong> iPhone'da Apple'ın cihaz üzerinde çalışan VisionKit/Vision çerçeveleri kullanılır. Android'de Google ML Kit (metin tanıma ve Google Play hizmetleri üzerinden sağlanan belge tarayıcı) cihaz üzerinde çalışır; taranan belgeler ve görseller Google'a gönderilmez. Google Play hizmetleri, Google'ın kendi politikası kapsamında genel kullanım veya tanılama verileri işleyebilir.</li>
+<li><strong>Sorun bildir:</strong> Ayarlar › Yardım › "Sorun bildir", support@mfatihicin.com adresine bir e-posta taslağı hazırlar: uygulama sürümü, cihaz modeli, dil, kasa sayıları, yedek/otomatik doldurma durumu ve cihazdaki tanı günlüğünün son satırları. Dosya adları, dosya içerikleri ve notlar eklenmez; e-posta adresi veya şifreye benzeyen metinler maskelenir. E-postayı sen göndermedikçe hiçbir şey gönderilmez.</li>
 </ul>
 
 <h2>4. İstenebilecek izinler</h2>
 <ul>
-<li><strong>Fotoğraflar / medya:</strong> seçtiğin öğeleri kasaya almak ve istersen orijinalleri silmek için.</li>
-<li><strong>Kamera:</strong> fotoğraf/video çekmek, belge taramak ve izinsiz giriş raporunu açtıysan yanlış kilit denemesinde fotoğraf çekmek için. Bu fotoğraflar cihazda kalır.</li>
-<li><strong>Mikrofon:</strong> kasaya ses kaydı almak için.</li>
-<li><strong>Konum:</strong> yalnızca izinsiz giriş raporunda konumu açtıysan; konum denemeyle birlikte cihazda saklanır.</li>
-<li><strong>Bildirimler:</strong> yedek sorunu ve izinsiz giriş gibi yerel uyarılar için. Push sunucusu kullanılmaz.</li>
+<li><strong>Fotoğraflar / medya:</strong> seçtiğin öğeleri kasaya almak ve istersen orijinallerini silmek ya da öğeleri galeriye geri aktarmak için.</li>
+<li><strong>Kamera:</strong> fotoğraf çekmek, video kaydetmek, belge taramak ve izinsiz giriş raporunu açarsan (varsayılan olarak kapalı) yanlış denemede ön kamerayla fotoğraf çekmek için.</li>
+<li><strong>Mikrofon:</strong> sesli not ve kasaya kaydedilen videoların sesi için.</li>
+<li><strong>Konum (uygulama kullanılırken):</strong> yalnızca izinsiz giriş raporunda konumu açarsan (varsayılan olarak kapalı); konum, denemeyle birlikte cihazda saklanır.</li>
+<li><strong>Bildirimler:</strong> yedek hatırlatması ve izinsiz giriş uyarısı gibi yerel bildirimler için. Bildirim sunucusu kullanılmaz.</li>
 <li><strong>Yerel ağ:</strong> Wi‑Fi ve telefondan telefona aktarım için.</li>
-<li><strong>Otomatik doldurma (sistem kimlik sağlayıcısı):</strong> açarsan kayıtlı hesapların işletim sistemi aracılığıyla diğer uygulama ve tarayıcılarda önerilir. Kayıtlar uygulamanın cihazdaki şifreli ortak deposunda tutulur.</li>
+<li><strong>Otomatik doldurma (sistem parola sağlayıcısı):</strong> açarsan kayıtlı girişlerin işletim sistemi üzerinden diğer uygulama ve tarayıcılarda önerilir. Kayıtlar cihazdaki şifreli depoda tutulur.</li>
+<li><strong>Takip izni (iOS) / reklam kimliği (Android):</strong> 5. bölüme bak.</li>
 </ul>
-<p>Tüm izinler isteğe bağlıdır ve sistem ayarlarından geri alınabilir.</p>
+<p>Her izin isteğe bağlıdır ve sistem ayarlarından geri alınabilir.</p>
+<p><strong>Başkalarına ait veriler:</strong> İzinsiz giriş fotoğrafı ve konumu, telefonunu açmaya çalışan başka bir kişiyi gösterebilir. Bu kayıtlar yalnızca cihazında kalır; bunları hukuka uygun kullanmak senin sorumluluğundadır. Bu kayıtlar bize hiçbir zaman ulaşmaz.</p>
 
 <h2>5. Ücretsiz sürümde reklamlar</h2>
-<p>Ücretsiz sürümde reklam gösterilir (kasa ekranında bir banner, görüntüleyiciden dönüşte ara sıra tam ekran reklam ve isteğe bağlı olarak 72 saatlik Pro denemesi açan ödüllü reklam). Reklamlar <strong>Unity LevelPlay (ironSource)</strong> ve aracılık ettiği reklam ağları tarafından sunulur. Bu amaçla reklam SDK'sı cihazının reklam kimliğini (iOS'ta IDFA, yalnızca izin verirsen; Android'de GAID), genel cihaz bilgisini (model, sistem sürümü, dil, IP tabanlı yaklaşık konum) ve reklam etkileşim verilerini toplayabilir. <strong>Kasandaki hiçbir şey (dosyalar, notlar, şifreler, arama dizini) reklam SDK'sına açık değildir.</strong></p>
+<p>Ücretsiz sürümde reklam gösterilir: bazı kasa ekranlarında banner, ara sıra tam ekran reklam ve 72 saatlik Pro denemesi açan isteğe bağlı ödüllü reklam. Reklamlar <strong>Unity LevelPlay (ironSource)</strong> ve onun aracılık ettiği reklam ağları tarafından sunulur. Bu amaçla reklam kitleri cihazının reklam kimliğini (iOS'ta yalnızca izleme izni verirsen IDFA; Android'de Google reklam kimliği ve App Set ID), satıcı kimliğini (IDFV), cihaz bilgilerini (model, işletim sistemi sürümü, dil), IP adresini ve buna dayalı yaklaşık konumu, reklam etkileşimlerini ve tanılama verilerini işleyebilir. <strong>Kasandaki hiçbir şey (dosyalar, notlar, şifreler, arama dizini, tarayıcı verileri) reklam kitlerine hiçbir zaman açık değildir.</strong></p>
+<p>Alıcılar:</p>
 <ul>
-<li><strong>Tercihin:</strong> iOS'ta sistem izleme izni sorar; AB/AEA/BK/İsviçre'de bir rıza diyaloğu kişiselleştirilmiş ya da kişiselleştirilmemiş reklamı seçtirir; ABD'deki kullanıcılar Ayarlar › Reklam tercihleri'nden "satış/paylaşım"ı reddedebilir. Tercihi istediğin zaman Ayarlar'dan değiştirebilirsin.</li>
-<li><strong>Hiç reklam istemiyorsan:</strong> Kasam Pro reklamları kaldırır; Pro kullanıcılarda reklam SDK'sı hiç başlatılmaz.</li>
-<li>Reklam ortağı politikası: <a href="https://unity.com/legal/privacy-policy">Unity gizlilik politikası</a>.</li>
+<li>Unity Technologies — Unity LevelPlay / ironSource reklam aracılığı (reklam kalitesi bileşeni dahil): ABD, İsrail ve diğer ülkeler</li>
+<li>Unity Ads (Unity Technologies): ABD</li>
+<li>Liftoff Monetize (Vungle): ABD</li>
+<li>Yandex Mobile Ads (AppMetrica bileşenleri dahil): Yandex şirketler grubu; işleyen şirkete göre Rusya Federasyonu, BAE veya diğer ülkeler</li>
+<li>BIGO Ads: Singapur — bağdaştırıcısı uygulamada bulunur, ancak şu anda bu ağdan reklam istenmez; etkinleştirilirse aynı verileri işleyebilir</li>
+</ul>
+<p>Reklam ağları, reklamı göstermek, ölçmek ve sahtekarlığı önlemek için kendi gizlilik politikaları kapsamında IP adresine dayalı yaklaşık konum gibi verileri de işleyebilir. Bu ağlar bu işlemler bakımından kendi adına veri sorumlusudur.</p>
+<ul>
+<li><strong>Seçimlerin:</strong> iOS'ta sistem izleme izni ister; izin vermezsen IDFA paylaşılmaz. AB/AEA, Birleşik Krallık ve İsviçre'de ilk açılışta bir onay penceresi kişiselleştirilmiş veya kişiselleştirilmemiş reklamı seçtirir. ABD'deki kullanıcılar kişisel bilgilerinin "satılmasını/paylaşılmasını" reddedebilir. Her ülkede, istediğin an <em>Ayarlar › Gizlilik ve yasal › Reklam tercihleri</em> bölümünden kişiselleştirilmiş veya kişiselleştirilmemiş reklamı seçebilirsin; kişiselleştirilmemiş seçilirse LevelPlay'e "rıza yok / satma" sinyali gönderilir.</li>
+<li><strong>Türkiye ve diğer ülkeler:</strong> Uygulamanın şu anki sürümlerinde AB/AEA, Birleşik Krallık ve İsviçre dışında ilk açılışta ayrı bir reklam rıza ekranı gösterilmez. iOS'ta IDFA yalnızca izleme izni verirsen paylaşılır; Android'de reklam ağları cihazının reklam kimliğini kullanabilir. Kişiselleştirilmiş reklam istemiyorsan Reklam tercihleri'nden "kişiselleştirilmemiş"i seç ve/veya cihaz ayarlarından reklam kimliğini sil ya da sıfırla (Android: Ayarlar › Gizlilik (veya Google) › Reklamlar; iOS: Ayarlar › Gizlilik ve Güvenlik › İzleme).</li>
+<li><strong>Hiç reklam olmadan:</strong> Kasam Pro (ve 72 saatlik deneme) reklamları kaldırır; Pro etkinken reklam kiti başlatılmaz ve izleme izni sorulmaz.</li>
+<li>Politikalar: <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity</a> · <a href="https://liftoff.io/privacy-policy/">Liftoff</a> · <a href="https://yandex.com/legal/confidential/">Yandex</a> · <a href="https://www.bigossp.com/privacy">BIGO Ads</a></li>
 </ul>
 
 <h2>6. Uygulama içi satın alma</h2>
-<p>Kasam Pro tek seferlik bir satın almadır; işlem Apple App Store ya da Google Play tarafından yürütülür. Ödeme bilgilerini almayız ve saklamayız. Satın alma hakkı <strong>RevenueCat</strong> üzerinden doğrulanır; RevenueCat anonim bir uygulama kullanıcı kimliği ve mağaza makbuzunu alır, kasa içeriğini asla görmez. Satın alma mağaza hesabına bağlıdır ve uygulamadan geri yüklenebilir.</p>
+<p>Kasam Pro, Apple App Store veya Google Play üzerinden yapılan tek seferlik bir satın almadır. Ödeme bilgilerini almayız ve saklamayız. Satın alma hakkı <strong>RevenueCat, Inc. (ABD)</strong> ile doğrulanır; RevenueCat anonim bir uygulama kullanıcı kimliği, mağaza makbuzu/satın alma geçmişi, IP adresi ve temel cihaz bilgisi alır; kasa içeriğini hiçbir zaman görmez. Satın alma mağaza hesabına bağlıdır ve uygulamadan geri yüklenebilir. Apple ve Google satın almanı kendi politikaları kapsamında, kendi adlarına veri sorumlusu olarak işler.</p>
 
-<h2>7. Çocukların gizliliği</h2>
-<p>Uygulama 13 yaş altı çocuklara yönelik değildir; çocuklar dâhil hiç kimseden bilerek veri toplamayız.</p>
+<h2>7. Amaçlar ve hukuki sebepler</h2>
+<ul>
+<li><strong>Satın almanın doğrulanması ve geri yüklenmesi, destek e-postalarının cevaplanması:</strong> sözleşmenin kurulması ve ifası (KVKK m.5/2-c; GDPR m.6/1-b).</li>
+<li><strong>Ücretsiz sürümü finanse eden kişiselleştirilmemiş reklamların gösterilmesi, reklam sahtekarlığının önlenmesi, güvenlik:</strong> meşru menfaat (KVKK m.5/2-f; GDPR m.6/1-f).</li>
+<li><strong>Kişiselleştirilmiş reklam:</strong> açık rızan (KVKK m.5/1; GDPR m.6/1-a); iOS izleme izniyle ve/veya Reklam tercihleri ayarıyla verilir ve istediğin an geri alınabilir (Türkiye'deki mevcut durum için 5. bölüme bak).</li>
+<li><strong>KVKK başvurularının kaydı, hukuki talepler:</strong> hukuki yükümlülük ile bir hakkın tesisi, kullanılması veya korunması (KVKK m.5/2-ç ve 5/2-e).</li>
+</ul>
+<p>Yalnızca cihazında kalan veriler (kasan) tarafımızca işlenmez. Verilerini satmayız ve hakkında otomatik karar vermeyiz.</p>
 
-<h2>8. Verilerin silinmesi</h2>
-<p>Tüm veriler cihazında olduğundan tamamen senin kontrolündedir: tek tek öğeleri sil, Ayarlar'daki "Tüm verileri sil"i kullan ya da uygulamayı kaldır. Uygulamayı kaldırmak kasayı ve anahtarlarını kalıcı olarak siler. Kendi bulut klasörüne kaydettiğin yedekler senin kontrolünde kalır.</p>
+<h2>8. Yurt dışına aktarım</h2>
+<p>Hizmet sağlayıcılarımızın sunucuları Türkiye dışındadır; yukarıda sayılan verilerin ABD, İsrail, Rusya Federasyonu/BAE ve Singapur gibi ülkelere aktarılması, ücretsiz sürümün ve satın almaların çalışması için teknik bir gerekliliktir. Bu ülkeler için Kişisel Verileri Koruma Kurulu'nun verdiği bir yeterlilik kararı bulunmamaktadır. Bu aktarımlar KVKK m.9 kapsamındadır. Bugün itibarıyla sağlayıcılarla imzalanmış ve Kurum'a bildirilmiş bir KVKK standart sözleşmesi <strong>bulunmamaktadır</strong>; aktarımlarda sağlayıcıların sözleşmelerinde yer alan veri koruma taahhütlerine (veri işleme sözleşmeleri ve bunlara dayalı teknik ve idari güvenlik önlemleri) dayanıyoruz. KVKK m.9'da öngörülen standart sözleşmenin imzalanmasını sağlayıcılardan talep ediyoruz; bir sözleşme imzalanırsa Kanun gereği 5 iş günü içinde Kurum'a bildirilecek ve bu metin güncellenecektir. Aktarılan veriyi, hizmetin gerektirdiği en az düzeyde tutmaya çalışıyoruz. AB/AEA'daki kullanıcılar için aktarımlar, sağlayıcıların sunduğu AB Standart Sözleşme Maddeleri veya AB-ABD Veri Gizliliği Çerçevesi gibi güvencelere dayanır. Pro kullanıcılarında reklamla ilgili aktarımlar hiç yapılmaz.</p>
 
-<h2>9. Değişiklikler</h2>
-<p>Bu politika değişirse yeni sürüm güncel tarihle bu sayfada yayınlanır.</p>
+<h2>9. Saklama süreleri</h2>
+<ul>
+<li><strong>Kasa içeriği, izinsiz giriş kayıtları, tarayıcı verileri:</strong> sen ya da uygulama silinene kadar cihazında. Çöp kutusundaki öğeler 30 gün sonra otomatik silinir.</li>
+<li><strong>Yedekler:</strong> seçtiğin klasörde, sen silene kadar; uygulama silinince silinmez.</li>
+<li><strong>Bize gönderdiğin e-postalar</strong> (destek, sorun raporu, veri talebi): cevap için gerektiği sürece; KVKK başvuruları ve cevaplarımız ispat amacıyla 3 yıl saklanır.</li>
+<li><strong>Reklam ağları, RevenueCat, Apple ve Google:</strong> kendi saklama politikalarına göre. RevenueCat, satın almanı geri yükleyebilmek için satın alma kaydını tutar.</li>
+</ul>
 
-<h2>10. İletişim</h2>
-<p>Gizlilikle ilgili sorular: <a href="mailto:mfatihicin@gmail.com">mfatihicin@gmail.com</a></p>
+<h2>10. Çocukların gizliliği</h2>
+<p>Kasam genel kitleye yöneliktir; <strong>13 yaşından küçük çocuklara yönelik değildir</strong> ve uygulama mağazalarının çocuk kategorilerinde ("Kids", "Families") yer almaz; Google Play'deki hedef kitlesi 18 yaş ve üzeridir. 18 yaşından küçüksen uygulamayı veli veya vasinin bilgisi ve gözetimiyle kullanmalısın; satın almalar için mağazanın ebeveyn denetimlerini (Apple "Satın Almadan Önce Sor", Google Play ebeveyn denetimleri) kullanmanı öneririz. 13 yaşından küçük bir çocuğa ait veri işlediğimizi öğrenirsek bu veriyi sileriz. Velisiysen ve çocuğunun veri paylaştığını düşünüyorsan <a href="mailto:support@mfatihicin.com">support@mfatihicin.com</a> adresine yaz.</p>
+
+<h2>11. Verilerin silinmesi</h2>
+<p>Kasan cihazında olduğu için kontrol tamamen sendedir: öğeleri tek tek silebilir, Ayarlar'daki "Tüm verileri sil"i kullanabilir ya da uygulamayı kaldırabilirsin. Uygulamayı kaldırmak kasayı ve anahtarlarını kalıcı olarak siler. Kendi bulut klasörüne aldığın yedekler senin kontrolünde kalır. Reklam kimliğini sıfırlamak için cihaz ayarlarını kullan (5. bölüm). Bizde bulunanlar (e-postalar) veya RevenueCat satın alma kaydı için bize yaz; RevenueCat kimliği anonim olduğundan kaydı bulmak için mağaza sipariş numarasını isteyebiliriz.</p>
+
+<h2>12. Hakların ve başvuru</h2>
+<p>KVKK m.11 kapsamında şu haklara sahipsin: kişisel verilerinin işlenip işlenmediğini öğrenme ve işlenmişse bilgi isteme; işlenme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme; yurt içinde veya yurt dışında aktarıldığı üçüncü kişileri bilme; eksik veya yanlış işlenmişse düzeltilmesini, KVKK m.7 çerçevesinde silinmesini veya yok edilmesini ve bu işlemlerin aktarılan üçüncü kişilere bildirilmesini isteme; münhasıran otomatik sistemlerle analiz edilmesi sonucu aleyhine bir sonuç çıkmasına itiraz etme; kanuna aykırı işleme nedeniyle zarara uğrarsan zararın giderilmesini talep etme. AB/AEA'daysan GDPR kapsamında erişim, düzeltme, silme, kısıtlama, itiraz, taşınabilirlik ve rızayı geri alma hakların da vardır.</p>
+<ul>
+<li><strong>Uygulama içinden:</strong> Ayarlar › Gizlilik ve yasal › "Veri talebi (KVKK/GDPR)" (uygulamanın güncel sürümlerinde).</li>
+<li><strong>E-posta:</strong> <a href="mailto:support@mfatihicin.com">support@mfatihicin.com</a></li>
+<li><strong>Yazılı olarak veya KEP ile:</strong> [YAZIŞMA ADRESİ / KEP — eklenecek]</li>
+</ul>
+<p>Başvurunu en geç <strong>30 gün</strong> içinde ücretsiz cevaplarız. Başvurun reddedilir, cevabımızı yetersiz bulursan veya süresinde cevap alamazsan Kişisel Verileri Koruma Kurulu'na şikâyette bulunabilirsin (KVKK m.14). Ayrıntılar: <a href="kvkk.html">KVKK Aydınlatma Metni</a>.</p>
+
+<h2>13. Güvenlik olayları</h2>
+<p>Kasan bizde bulunmadığı için bizim tarafımızdaki bir ihlal kasanı açığa çıkaramaz. İşlediğimiz verileri etkileyen bir veri ihlalini öğrenirsek Kişisel Verileri Koruma Kurulu'na 72 saat içinde bildirir, etkilenen kişilere de makul en kısa sürede haber veririz.</p>
+
+<h2>14. Değişiklikler</h2>
+<p>Bu politika değişirse yeni sürüm güncel tarihle bu sayfada yayınlanır; önemli değişiklikler uygulamada da duyurulur.</p>
+
+<h2>15. İletişim</h2>
+<p>Mehmet Fatih İçin · <a href="mailto:support@mfatihicin.com">support@mfatihicin.com</a> · <a href="support.html">Yardım Merkezi</a></p>
+</div>
+
+<div class="foot">
+<p>© 2026 KeepHold / Kasam · Data controller &amp; developer / Veri sorumlusu ve geliştirici: Mehmet Fatih İçin · <a href="mailto:support@mfatihicin.com">support@mfatihicin.com</a></p>
+<p><a href="index.html">Privacy / Gizlilik</a> · <a href="kvkk.html">KVKK Aydınlatma Metni / Notice</a> · <a href="termsofuse.html">Terms / Kullanım Koşulları</a> · <a href="support.html">Support / Destek</a> · <a href="faq.html">FAQ / SSS</a></p>
 </div>
 </body>
 </html>
